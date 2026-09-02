@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset
+data.zip
+*.zip
+
+
+# Dataset
+data.zip
+*.zip
+
+# Training and testing data
+train/
+Test_NoisyLR/
+#
+
+# TensorBoard
+tensorboard/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Web application
+Web Application/
+
+# Manuscript
+Journal_Manuscripts.docx
+Journal_Manuscripts.pdf

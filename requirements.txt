@@ -1,0 +1,33 @@
+
+numpy
+scipy
+pandas
+Pillow
+
+# Deep Learning
+torch
+torchvision
+
+# Image processing
+scikit-image
+opencv-python
+
+# Machine Learning / Statistics
+scikit-learn
+
+# Visualization
+matplotlib
+
+# Progress / notebooks
+tqdm
+jupyter
+ipykernel
+
+# Training monitoring
+tensorboard
+
+# Perceptual metric
+lpips
+
+# Model complexity / benchmarking
+thop
