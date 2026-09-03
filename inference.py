@@ -261,6 +261,7 @@ def main():
     print(f"Images processed:         {n_processed}")
     print(f"Images failed:            {n_failed}")
     print(f"Total wall-clock time:    {total_time:.2f} sec")
+    
     if per_image_times:
         mean_ms = np.mean(per_image_times) * 1000
         print(f"Mean per-image latency:   {mean_ms:.2f} ms")
