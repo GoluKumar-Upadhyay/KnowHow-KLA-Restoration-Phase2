@@ -13,21 +13,37 @@
 
 ---
 
-## 1. Overview
+## 1. Phase 2 Submission
 
-KnowHow is a research-driven image restoration solution developed for the **KLA Hackathon 2026 — AI-Based Restoration of Degraded Images for Semiconductor Inspection**.
+This repository contains the complete Phase 2 implementation of our solution for:
 
-The task is to restore degraded semiconductor inspection images affected by:
+**AI-Based Restoration of Degraded Images for Semiconductor Inspection**
 
-- Speckle noise
-- Additive Gaussian noise
-- Spatial downsampling
+### Phase 2 Deliverables
 
-The provided degraded image is **128 × 128**, while the corresponding clean ground-truth image is **256 × 256**.
+- ✅ Final trained LDMH + FiLM model
+- ✅ Standalone inference pipeline
+- ✅ Reproducible evaluation workflow
+- ✅ Statistical degradation analysis
+- ✅ Ablation study
+- ✅ Validation results and visual outputs
+- ✅ Research documentation
+- ✅ Final presentation and demo video
 
-The objective is to reconstruct a clean, high-resolution image while maintaining restoration quality, generalization to unseen structures, and practical inference efficiency.
+> Phase 2 extends the initial concept into a fully implemented and experimentally validated restoration system.
 
-No defect labels are provided or required. This is a **pure image restoration task**.
+## 📊 Phase 2 Evidence
+
+| Evidence | Phase 2 Result |
+|---|---|
+| Statistical Analysis | Non-Gaussian, heavy-tailed residual behavior |
+| Spatial Analysis | Significant variation across local image regions |
+| Proposed Architecture | Local Distribution Mixture Head + FiLM |
+| Ablation | Progressive improvement across tested configurations |
+| Best PSNR | **28.206 dB** |
+| Best SSIM | **0.7542** |
+| Lowest LPIPS | **0.2540** |
+| Reproducibility | Standalone inference without source modification |
 
 ---
 
@@ -88,8 +104,8 @@ The repository is designed so that the submitted model can be evaluated without 
 ## 3.1 Clone the repository
 
 ```
-git clone https://github.com/GoluKumar-Upadhyay/KnowHow-KLA-Restoration.git
-cd KnowHow-KLA-Restoration
+git clone https://github.com/GoluKumar-Upadhyay/KnowHow-KLA-Restoration-Phase2.git
+cd KnowHow-KLA-Restoration-Phase2
 ```
 
 ## 3.2 Install dependencies
@@ -530,18 +546,18 @@ with stable behavior from approximately epoch 60 through epoch 200.
 
 ---
 
-# 10. Final Results
+# 10. Final Ablation Results
 
 ## Full-scale validation
 
-| ModelBest EpochPSNR (dB)SSIM     |         |            |            |
-| -------------------------------- | ------- | ---------- | ---------- |
-| Baseline                         | 200     | 28.120     | 0.7503     |
-| + Global Generalized Charbonnier | 200     | 28.124     | 0.7511     |
-| LDMH (corrected)                 | 200     | 28.138     | 0.7519     |
-| **Full (corrected)**             | **195** | **28.206** | **0.7533** |
+| Model | PSNR ↑ | SSIM ↑ | LPIPS ↓ |
+|---|---:|---:|---:|
+| BaselineNet | 28.120 | 0.7513 | 0.2633 |
+| Global Gen. Charbonnier | 28.124 | 0.7521 | 0.2609 |
+| LDMH loss only | 28.139 | 0.7530 | 0.2614 |
+| **Full LDMH + FiLM (Proposed)** | **28.206** | **0.7542** | **0.2540** |
 
-The full corrected model achieved the highest PSNR and SSIM among the four tested configurations under the full-scale training protocol.
+**Key finding:** The full LDMH + FiLM model achieved the best result across all three validation metrics.
 
 ---
 
