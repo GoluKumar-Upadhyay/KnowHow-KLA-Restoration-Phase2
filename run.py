@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 run.py -- entry point 
 (AI-Based Restoration of Degraded Images), SEMICON Hackathon 2026.
