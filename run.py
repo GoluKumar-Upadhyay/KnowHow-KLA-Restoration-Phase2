@@ -191,7 +191,7 @@ def main():
             plt.close(fig)
             print(f"  saved optional comparison grid: {grid_path}")
         except ImportError:
-            print("  [NOTE] --save_grid requested but matplotlib is unavailable; skipped (does not affect .npy outputs).")
+            print("  [NOTE] --save grid requested but matplotlib is unavailable; skipped (does not affect .npy outputs).")
 
     total_time = time.time() - t_start
 

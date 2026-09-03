@@ -95,7 +95,7 @@ def run_batch(model, batch_np, device, use_half):
 
 
 def save_restored_png(restored_np, output_path):
-    """Save a normalized restored array as an 8-bit grayscale PNG."""
+    
     restored_uint8 = np.clip(restored_np * 255.0, 0, 255).astype(np.uint8)
     Image.fromarray(restored_uint8, mode="L").save(output_path, format="PNG")
 
