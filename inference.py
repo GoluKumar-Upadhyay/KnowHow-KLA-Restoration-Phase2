@@ -185,6 +185,7 @@ def main():
         print("\nNo supported input files found.")
         return
 
+
     print(f"\nFound {len(input_paths)} input images.")
     print(f"Input directory:  {os.path.abspath(args.input_dir)}")
     print(f"Output directory: {os.path.abspath(args.output_dir)}")
