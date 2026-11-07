@@ -1,15 +1,4 @@
-"""
-Shared, full-featured training loop used by 05_Model_Training.ipynb (and
-reusable from 06_Ablation_Study.ipynb). Implements: AdamW, cosine LR
-schedule, mixed precision, gradient clipping, early stopping (on val PSNR),
-per-epoch CSV logging, TensorBoard logging, best+last checkpointing
-(with optimizer state, epoch, best PSNR/SSIM, full history), and
-loss/PSNR/SSIM curve plotting.
 
-UPDATED: now includes beta_diversity_penalty + load_balance_penalty to fix
-the component-collapse issue (all K betas converging to the clamp ceiling,
-one component going unused), plus per-epoch component-health logging.
-"""
 import os
 import csv
 import time
